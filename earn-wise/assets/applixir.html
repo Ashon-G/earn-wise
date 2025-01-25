@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Applixir Integration</title>
+    <script src="https://cdn.applixir.com/applixir.sdk4.0m.js"></script>
+</head>
+<body>
+    <div id="applixir_vanishing_div" hidden>
+        <iframe id="applixir_parent"></iframe>
+    </div>
+    <script>
+        window.addEventListener("message", (event) => {
+            if (event.data === "invokeAd") {
+                const options = event.detail || {};
+                if (typeof invokeApplixirVideoUnit === "function") {
+                    invokeApplixirVideoUnit(options);
+                }
+            }
+        });
+    </script>
+</body>
+</html>

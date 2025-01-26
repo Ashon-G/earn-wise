@@ -73,3 +73,6 @@ const styles = StyleSheet.create({
     position: 'absolute',
   },
 });
+
+export type { AvatarCreatorConfig, Language, BodyType, IFrameEvent } from '../types';
+export type * from '../../events';
